@@ -5557,21 +5557,13 @@ function publishPacketToAllTransports(packet, isReliable = false) {
         try { mpState.hostConn.send(packet); } catch (e) {}
     }
 
-    // 2. Global Multi-Broker MQTT Over WebSockets
+    // 2. Global Multi-Broker MQTT Over WebSockets (Istalgan tarmoqda 100% yetib borishi uchun barcha ulangan brokerlarga)
     if (mpState.mqttClients && mpState.mqttClients.length > 0) {
-        if (isReliable) {
-            mpState.mqttClients.forEach(cl => {
-                if (cl && cl.connected) {
-                    try { cl.publish(topic, jsonStr, { qos: 0 }); } catch (e) {}
-                }
-            });
-        } else {
-            // Yuqori chastotali kadrlar uchun birinchi ulangan tez MQTT brokerga yuboramiz
-            const activeBroker = mpState.mqttClients.find(cl => cl && cl.connected);
-            if (activeBroker) {
-                try { activeBroker.publish(topic, jsonStr, { qos: 0 }); } catch (e) {}
+        mpState.mqttClients.forEach(cl => {
+            if (cl && cl.connected) {
+                try { cl.publish(topic, jsonStr, { qos: 0 }); } catch (e) {}
             }
-        }
+        });
     }
 
     // 3. Local BroadcastChannel (Bitta qurilmada bir nechta tab uchun 0ms)
