@@ -102,9 +102,9 @@
     <canvas id="gameCanvas" width="1309" height="807" style="width: 1309px; height: 807px;"></canvas>
 
     <!-- Xabar va Ogohlantirish Toast (Alert o'rniga) -->
-    <div id="toast-msg" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 border-2 border-emerald-400 text-white px-5 py-2.5 rounded-2xl shadow-2xl font-extrabold text-xs sm:text-sm flex items-center gap-2 transition-all">
+    <div id="toast-msg" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 border-2 border-emerald-400 text-white px-5 py-2.5 rounded-2xl shadow-2xl font-extrabold text-xs sm:text-sm flex items-center gap-2 transition-all hidden">
         <i class="fa-solid fa-circle-info text-amber-400 text-lg"></i>
-        <span id="toast-text">✅ Xona ochildi! Kod: MECNQV (Wi-Fi va Internet orqali 4 kishigacha kirishi mumkin)</span>
+        <span id="toast-text">✅ Xona ochildi! Kod: RLC9BT (Wi-Fi va Internet orqali 4 kishigacha kirishi mumkin)</span>
     </div>
 
     <!-- =====================================================================
@@ -313,39 +313,39 @@
                 <div class="lg:col-span-4 bg-slate-900/90 border-2 border-slate-700/80 rounded-3xl p-4 sm:p-5 flex flex-col justify-between gap-3 shadow-xl h-full">
                     <div>
                         <div class="flex items-center justify-between">
-                            <span id="home-dino-class" class="bg-rose-500/20 border border-rose-400/40 text-rose-300 text-xs font-extrabold px-3 py-0.5 rounded-full uppercase">Suv va Quruqlik Yirtqichi</span>
-                            <span id="home-dino-lvl" class="text-amber-400 font-extrabold text-sm">Daraja 1 / 10</span>
+                            <span id="home-dino-class" class="bg-rose-500/20 border border-rose-400/40 text-rose-300 text-xs font-extrabold px-3 py-0.5 rounded-full uppercase">Galaktik Robot Titan</span>
+                            <span id="home-dino-lvl" class="text-amber-400 font-extrabold text-sm">Daraja 10 / 10</span>
                         </div>
-                        <h2 id="home-dino-title" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">5. Spinozavr</h2>
-                        <p id="home-dino-desc" class="text-xs sm:text-sm text-slate-300 mt-1">Orqasida ulkan yelkani bor, ko'k plazma alangasini purkaydi!</p>
+                        <h2 id="home-dino-title" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">18. Omega Kiber-Dino X</h2>
+                        <p id="home-dino-desc" class="text-xs sm:text-sm text-slate-300 mt-1">100% Titan zirh, ikki barobar reaktiv turbina va uzluksiz Kiber-Lazer!</p>
 
                         <!-- Ko'rsatkichlar (Progress barlar) -->
                         <div class="space-y-2.5 mt-4 bg-slate-950/70 p-3.5 rounded-2xl border border-slate-800">
                             <div>
                                 <div class="flex justify-between text-xs font-bold mb-1">
                                     <span class="text-rose-400"><i class="fa-solid fa-heart"></i> Zirh va Jon</span>
-                                    <span id="stat-hp-val" class="text-white">500 HP</span>
+                                    <span id="stat-hp-val" class="text-white">1450 HP</span>
                                 </div>
                                 <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                                    <div id="stat-hp-bar" class="bg-rose-500 h-full w-3/5" style="width: 41.6667%;"></div>
+                                    <div id="stat-hp-bar" class="bg-rose-500 h-full w-3/5" style="width: 100%;"></div>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex justify-between text-xs font-bold mb-1">
                                     <span class="text-amber-400"><i class="fa-solid fa-fire"></i> Alanga va Hujum Kuchi</span>
-                                    <span id="stat-dmg-val" class="text-white">130 Quvvat</span>
+                                    <span id="stat-dmg-val" class="text-white">382 Quvvat</span>
                                 </div>
                                 <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                                    <div id="stat-dmg-bar" class="bg-amber-500 h-full w-4/5" style="width: 50%;"></div>
+                                    <div id="stat-dmg-bar" class="bg-amber-500 h-full w-4/5" style="width: 100%;"></div>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex justify-between text-xs font-bold mb-1">
                                     <span class="text-cyan-400"><i class="fa-solid fa-jet-fighter"></i> Parvoz va Chaqqonlik</span>
-                                    <span id="stat-fly-val" class="text-white">110 Yoqilg'i</span>
+                                    <span id="stat-fly-val" class="text-white">385 Yoqilg'i</span>
                                 </div>
                                 <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                                    <div id="stat-fly-bar" class="bg-cyan-400 h-full w-3/4" style="width: 42.3077%;"></div>
+                                    <div id="stat-fly-bar" class="bg-cyan-400 h-full w-3/4" style="width: 100%;"></div>
                                 </div>
                             </div>
                         </div>
@@ -355,7 +355,7 @@
                     <div class="pt-2 flex flex-col gap-2">
                         <button id="btn-upgrade-dino" class="btn-3d w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-slate-950 font-extrabold py-3 px-4 rounded-2xl border-2 border-amber-200 flex items-center justify-between">
                             <span class="flex items-center gap-2 text-sm sm:text-base"><i class="fa-solid fa-bolt"></i> KUCHAYTIRISH (EVOLYUTSIYA)</span>
-                            <span id="upgrade-cost-badge" class="bg-slate-950 text-amber-400 px-3 py-1 rounded-xl text-xs font-extrabold">🪙 150</span>
+                            <span id="upgrade-cost-badge" class="bg-slate-950 text-amber-400 px-3 py-1 rounded-xl text-xs font-extrabold">MAX DARAJA</span>
                         </button>
                     </div>
                 </div>
@@ -464,7 +464,7 @@
                             <h2 class="text-xl sm:text-2xl font-extrabold text-emerald-400 flex items-center gap-2">
                                 <i class="fa-solid fa-tower-broadcast"></i> REAL-VAQTDA MULTIPLAYER (2 - 4 KISHI)
                             </h2>
-                            <span id="mp-status-pill" class="bg-emerald-500/20 border border-emerald-400 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">🟢 Xona Faol: MECNQV (1/4 O'yinchi)</span>
+                            <span id="mp-status-pill" class="bg-emerald-500/20 border border-emerald-400 text-emerald-300 text-xs font-extrabold px-3 py-1 rounded-full">🟢 Xona Faol: RLC9BT (1/4 O'yinchi)</span>
                         </div>
                         <p class="text-xs sm:text-sm text-slate-300 mt-1">
                             Bitta Wi-Fi tarmog'ida yoki Internet orqali 2, 3 va 4 kishi birga bitta 3D o'rmonda yugurishi, olov purkashi va birga ov qilishi mumkin!
@@ -479,7 +479,7 @@
                                     <p class="text-[11px] text-slate-400 mt-1">6 ta harf va sondan iborat maxsus Xona Kodi yaratiladi. Uni do'stlaringizga bering!</p>
                                     <div class="mt-3 bg-slate-900 border border-slate-700 rounded-xl p-2.5 text-center">
                                         <div class="text-[10px] text-slate-400 uppercase font-bold">Sizning Xona Kodingiz:</div>
-                                        <div id="mp-created-code" class="text-2xl sm:text-3xl font-extrabold tracking-widest text-amber-400 mt-0.5">MECNQV</div>
+                                        <div id="mp-created-code" class="text-2xl sm:text-3xl font-extrabold tracking-widest text-amber-400 mt-0.5">RLC9BT</div>
                                     </div>
                                 </div>
                                 <button id="btn-create-room" class="btn-3d w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-slate-950 font-extrabold py-3 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2">
@@ -513,7 +513,7 @@
         <div class="bg-slate-900 border-2 border-amber-400 rounded-xl p-2 text-center">
             <div class="text-xl">🦕</div>
             <div class="text-xs font-extrabold text-white truncate">Dino Ovchisi (Siz)</div>
-            <div class="text-[10px] text-amber-300">5. Spinozavr</div>
+            <div class="text-[10px] text-amber-300">4. Tritseratops Titan</div>
         </div>
     </div>
                         </div>
